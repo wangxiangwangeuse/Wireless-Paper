@@ -1,7 +1,7 @@
 #include "DEPG0420BxS19AFxX_BW.h"
 
 /************************************** init ************************************************/
-void DEPG0420BxS19AFxX_BW::EPD_Init(void) {
+void DEPG0420BxS19AFxX_BW::EPD_Init() {
 #if defined( ESP32 )
 	SPI.begin(this->clk_pin, MISO,MOSI, this->cs_pin);
 #elif defined( ESP8266 )

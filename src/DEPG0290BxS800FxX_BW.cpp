@@ -3,7 +3,7 @@
 /************************************** init ************************************************/
 void DEPG0290BxS800FxX_BW::EPD_Init(void) {
 #if defined( ESP32 )
-	SPI.begin(this->clk_pin, MISO,21, this->cs_pin);
+	SPI.begin(this->clk_pin, MISO,MOSI, this->cs_pin);
 #elif defined( ESP8266 )
 	SPI.pins(this->clk_pin, MISO, MOSI, this->cs_pin);
 	SPI.begin();

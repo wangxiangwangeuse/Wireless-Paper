@@ -3,14 +3,6 @@
 #include "HT_LCMEN2R13EFC1.h"  //V1.1
 #include "images.h"
 
-// QYEG0213RWS800_BWR   epd213bw(6, 5, 4, 7, 3, 2, -1, 6000000); //rst,dc,cs,busy,sck,mosi,miso,frequency
-// #ifdef ( ESP32 )
-//     #define RST_PIN         4
-//     #define DC_PIN          13
-//     #define CS_PIN          15
-//     #define BUSY_PIN        17
-//     #define CLK_PIN         16
-
     HT_LCMEN2R13EFC1 epd213bw(1, 1, 1, 1, 1);//reset_pin, dc_pin, cs_pin, busy_pin, clk_pin
 
 int width, height;

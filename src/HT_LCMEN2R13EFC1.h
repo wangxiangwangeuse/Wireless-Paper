@@ -5,6 +5,7 @@
 //250*122///////////////////////////////////////
 
 #define USE_213part_BW
+#define HT_LCMEN2R13EFC1
 
 #define ALLSCREEN_GRAGHBYTES	4000
 
@@ -65,7 +66,7 @@ class HT_LCMEN2R13EFC1:public EpdBase {
         ~HT_LCMEN2R13EFC1(){}
 
     public:
-        void EPD_Init(void); //Electronic paper initialization
+        void EPD_Init(uint8_t MOSI); //Electronic paper initialization
         void EPD_Update(void);
         void EPD_WhiteScreen_Black(void);
         void EPD_WhiteScreen_White(void);

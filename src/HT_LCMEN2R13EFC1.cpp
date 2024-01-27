@@ -41,11 +41,11 @@
 #define PIC_0 14
 #define PIC_6 15
 /************************************** init ************************************************/
-void HT_LCMEN2R13EFC1::EPD_Init(void)
+void HT_LCMEN2R13EFC1::EPD_Init(uint8_t MOSI)
 {
     /* this calls the peripheral hardware interface, see epdif */
 #if defined(ESP32)
-    SPI.begin(this->clk_pin, MISO, 2, this->cs_pin);
+    SPI.begin(this->clk_pin, MISO, MOSI, this->cs_pin);
 
 #elif defined(ESP8266)
     SPI.pins(this->clk_pin, MISO, MOSI, this->cs_pin);
