@@ -19,19 +19,19 @@ void EpdBase::SendData(unsigned char data) {
 /**
  *  @brief: Wait until the busy_pin goes LOW
  */
-#ifdef  HT_213LC
+// #ifdef  HT_213LC
 void EpdBase::WaitUntilIdle(void) {
  while(DigitalRead(busy_pin) == LOW) {      //LOW: idle, HIGH: busy
     DelayMs(100);
   } 
   }   
-#else
-void EpdBase::WaitUntilIdle(void) {
-   while(DigitalRead(busy_pin) == HIGH) {      //LOW: idle, HIGH: busy
-    DelayMs(100);
-    }   
-}
-    #endif
+// #else
+// void EpdBase::WaitUntilIdle(void) {
+//    while(DigitalRead(busy_pin) == HIGH) {      //LOW: idle, HIGH: busy
+//     DelayMs(100);
+//     }   
+// }
+//     #endif
 
 /**
  *  @brief: module reset.
