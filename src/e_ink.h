@@ -36,6 +36,10 @@
 /* 4.2 inch screen  BW and BWY and BWR */
 #define USE_420 defined ( USE_420_BWR ) || defined ( USE_420_BWY ) || \
                 defined ( USE_420_BW )
+/* 4.2 inch screen  BW and BWY and BWR */
+#define USE_426 defined ( USE_426_BWR ) || defined ( USE_426_BWY ) || \
+                defined ( USE_426_BW )
+                                
 /* 5.83 inch screen  BW and BWY and BWR */
 #if defined (USE_583_BWR) || defined (USE_583_BWY)/* preprocess the code to  merge the three colors */
 // #undef USE_583_BWR
@@ -61,7 +65,8 @@
                          defined ( USE_213_BWSoft ) || defined ( USE_213_BW ) || \
                          defined ( USE_583_BW ) ||  defined ( USE_583_THREE_COLORS ) || \
                          defined ( USE_750_BW ) ||  defined ( USE_750_BWR ) || \
-                         defined ( USE_750_BWY )
+                         defined ( USE_750_BWY )|| defined ( USE_426_BW )  \
+
 
 /* Select screen size */
 #if defined ( USE_154_BW_GREEN ) ||  defined ( USE_154_BW_BLUE )
@@ -103,6 +108,10 @@
 /* Display resolution */
 #define EPD_WIDTH       300
 #define EPD_HEIGHT      400
+#elif USE_426
+/* Display resolution */
+#define EPD_WIDTH       800
+#define EPD_HEIGHT      480
 
 #elif USE_583
 /* Display resolution */

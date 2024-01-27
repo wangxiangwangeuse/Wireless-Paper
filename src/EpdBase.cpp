@@ -20,7 +20,7 @@ void EpdBase::SendData(unsigned char data) {
  *  @brief: Wait until the busy_pin goes LOW
  */
 void EpdBase::WaitUntilIdle(void) {
-  while(DigitalRead(busy_pin) == HIGH) {      //LOW: idle, HIGH: busy
+ while(DigitalRead(busy_pin) == LOW) {      //LOW: idle, HIGH: busy
     DelayMs(100);
   }      
 }

@@ -77,7 +77,7 @@ const unsigned char lut_partial_update[] = {
         defined (  USE_213_BWR  ) || defined ( USE_213_BWY ) || \
         defined ( USE_213_BWSoft ) || defined ( USE_213_BW ) || \
         defined ( USE_583_BW ) || defined ( USE_583_THREE_COLORS ) || \
-        defined ( USE_750_BW ) || defined ( USE_750_BWR ) || defined ( USE_750_BWY )
+        defined ( USE_750_BW ) || defined ( USE_750_BWR ) || defined ( USE_750_BWY )||
 const unsigned char lut_full_update[30] PROGMEM= {
 };
 #endif
@@ -289,6 +289,12 @@ const unsigned char lut_wb[] PROGMEM={
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
             
 };
+
+const unsigned char CMD_USER[]={ 
+0x00, 0x3F, 0x3F, 0x10, 0X09, 0x13,
+};
+
+
 #endif
 
 
